@@ -46,6 +46,14 @@ const i18n = {
     'cert.6.desc': 'Módulo 1 &mdash; Certificado Phishing Prevention &amp; Ransomware Protection',
     'contact.intro': '¿Tienes un proyecto, una posición abierta o una idea que requiere <strong>Full-Stack, Cloud o Automatización con IA</strong>? Escríbeme &mdash; respondo rápido.',
     'contact.cta': 'Envíame un email', 'contact.or': 'o también por',
+    'nav.github': 'GitHub',
+    'section.github': 'GitHub &amp; Actividad',
+    'github.trophies': 'Trofeos',
+    'github.stats': 'Estadísticas',
+    'github.langs': 'Lenguajes',
+    'github.streak': 'Racha de contribuciones',
+    'github.activity': 'Actividad reciente',
+    'github.profile': 'Ver perfil completo en GitHub',
   },
   en: {
     'nav.about': 'About', 'nav.experience': 'Experience', 'nav.projects': 'Projects',
@@ -93,6 +101,14 @@ const i18n = {
     'cert.6.desc': 'Module 1 &mdash; Phishing Prevention &amp; Ransomware Protection Certificate',
     'contact.intro': 'Do you have a project, an open position or an idea that needs <strong>Full-Stack, Cloud or AI Automation</strong>? Write me &mdash; I respond quickly.',
     'contact.cta': 'Send me an email', 'contact.or': 'or reach me on',
+    'nav.github': 'GitHub',
+    'section.github': 'GitHub &amp; Activity',
+    'github.trophies': 'Trophies',
+    'github.stats': 'Stats',
+    'github.langs': 'Languages',
+    'github.streak': 'Contribution streak',
+    'github.activity': 'Recent activity',
+    'github.profile': 'View full GitHub profile',
   }
 };
 
