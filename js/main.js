@@ -171,6 +171,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 /* ===== TYPEWRITER ===== */
 const roles = [
+  'AI Security Engineer',
   'Azure Cloud Engineer',
   'Automatizacion con IA',
   'DevSecOps Engineer',
