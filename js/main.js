@@ -277,17 +277,39 @@ window.addEventListener('scroll', () => {
 
 scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-/* ===== CARD HOVER TILT (subtle 3D) ===== */
+/* ===== CARD HOVER TILT — 3D perspective tracking ===== */
 document.querySelectorAll('.project-card').forEach(card => {
+  card.style.transformStyle = 'preserve-3d';
   card.addEventListener('mousemove', e => {
     const rect = card.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width - 0.5;
     const y = (e.clientY - rect.top) / rect.height - 0.5;
-    card.style.transform = `translateY(-4px) rotateX(${-y * 5}deg) rotateY(${x * 5}deg)`;
-    card.style.transition = 'transform 0.1s ease';
+    const glare = card.querySelector('.card-glare');
+    if (glare) {
+      glare.style.background = `radial-gradient(circle at ${(x+0.5)*100}% ${(y+0.5)*100}%, rgba(255,255,255,0.06) 0%, transparent 60%)`;
+    }
+    card.style.transform = `perspective(900px) translateY(-6px) rotateX(${-y * 10}deg) rotateY(${x * 10}deg) scale3d(1.02,1.02,1.02)`;
+    card.style.transition = 'transform 0.08s ease';
   });
   card.addEventListener('mouseleave', () => {
+    const glare = card.querySelector('.card-glare');
+    if (glare) glare.style.background = '';
     card.style.transform = '';
-    card.style.transition = 'all 0.3s ease';
+    card.style.transition = 'transform 0.5s cubic-bezier(0.23,1,0.32,1), box-shadow 0.5s ease';
+  });
+});
+
+/* ===== MAGNETIC BUTTONS ===== */
+document.querySelectorAll('.btn-primary, .btn-nav').forEach(btn => {
+  btn.addEventListener('mousemove', e => {
+    const rect = btn.getBoundingClientRect();
+    const x = (e.clientX - rect.left - rect.width / 2) * 0.25;
+    const y = (e.clientY - rect.top - rect.height / 2) * 0.25;
+    btn.style.transform = `translate(${x}px, ${y}px)`;
+    btn.style.transition = 'transform 0.15s ease';
+  });
+  btn.addEventListener('mouseleave', () => {
+    btn.style.transform = '';
+    btn.style.transition = 'transform 0.4s cubic-bezier(0.23,1,0.32,1)';
   });
 });

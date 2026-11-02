@@ -698,6 +698,86 @@ strong { color: var(--text); font-weight: 600; }
   color: var(--primary); font-size: 1.1rem;
 }
 
+/* ===== SENIOR DESIGN UPGRADES ===== */
+
+/* Houdini @property for animated gradient border */
+@property --grad-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+/* 3D-ready cards */
+.project-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glare overlay (filled dynamically by JS) */
+.card-glare {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  border-radius: inherit;
+  transition: background 0.15s ease;
+}
+
+/* Shimmer sweep on hover */
+.project-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.035) 50%, transparent 60%);
+  transform: translateX(-100%);
+  transition: transform 0.65s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+.project-card:hover::after { transform: translateX(100%); }
+
+/* Animated rotating gradient border on featured + OSS cards */
+.project-featured,
+.project-card--oss {
+  --grad-angle: 0deg;
+  border: 1.5px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  background-image:
+    linear-gradient(var(--bg-card), var(--bg-card)),
+    conic-gradient(from var(--grad-angle), #2E9EF7 0%, #6C63FF 30%, #3fb950 60%, #2E9EF7 100%);
+  animation: spin-border 5s linear infinite;
+}
+@keyframes spin-border { to { --grad-angle: 360deg; } }
+
+/* Demo terminal preview in cards */
+.project-demo-wrap {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(46,158,247,0.1);
+  background: #080c14;
+  line-height: 0;
+}
+.project-demo-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: rgba(46,158,247,0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(46,158,247,0.6); }
+
+/* Stronger glow on featured card */
+.project-featured { box-shadow: 0 0 40px rgba(46,158,247,0.08), 0 20px 60px rgba(0,0,0,0.4); }
+.project-featured:hover { box-shadow: 0 0 60px rgba(46,158,247,0.15), 0 30px 80px rgba(0,0,0,0.5); }
+
 /* ===== CONTACT OPEN-TO ===== */
 .contact-open-to {
   margin-bottom: 1.75rem;
