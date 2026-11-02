@@ -30,7 +30,6 @@
         <li><a href="#projects"       class="nav-link" data-i18n="nav.projects">Proyectos</a></li>
         <li><a href="#stack"          class="nav-link" data-i18n="nav.stack">Stack</a></li>
         <li><a href="#certifications" class="nav-link" data-i18n="nav.certs">Certs</a></li>
-        <li><a href="#github-stats" class="nav-link" data-i18n="nav.github">GitHub</a></li>
         <li><a href="#contact" class="btn-nav" data-i18n="nav.contact">Contacto</a></li>
       </ul>
       <div class="nav-actions">
@@ -124,7 +123,7 @@
           <p data-i18n-html="about.p2">Diseño aplicaciones web e integraciones mediante APIs REST con <strong>React y FastAPI (Python)</strong>, y construyo automatizaciones con IA que eliminan trabajo manual a escala. Mi diferenciador es la seguridad aplicada al ciclo de desarrollo (<strong>DevSecOps, Zero Trust, ISO/IEC 27001</strong>): entrego software rápido, mantenible y seguro desde el diseño.</p>
           <p data-i18n-html="about.p3">Ejerzo <strong>liderazgo técnico</strong> mediante code reviews, definición de estándares y mentoría a desarrolladores.</p>
           <div class="about-meta">
-            <div class="meta-item"><i class="fas fa-graduation-cap"></i><span data-i18n="about.edu">Ingeniería en Software &mdash; EPN (2020&ndash;2026)</span></div>
+            <div class="meta-item"><i class="fas fa-graduation-cap"></i><span data-i18n="about.edu">Ingeniería en Software &mdash; EPN (2020&ndash;2026) &middot; <abbr title="Certificado EURACE — Calidad Europea en Educación de Ingeniería (ENAEE)" style="text-decoration:underline dotted;cursor:help;font-weight:600;color:var(--accent)">EURACE</abbr></span></div>
             <div class="meta-item"><i class="fas fa-building"></i><span data-i18n="about.company">IST AMERICAS &mdash; Desarrolladora de Innovación</span></div>
             <div class="meta-item"><i class="fas fa-language"></i><span data-i18n="about.lang">Español (nativo) &middot; Inglés B2 profesional</span></div>
             <div class="meta-item"><i class="fas fa-map-pin"></i><span data-i18n="about.loc">Quito, Ecuador &middot; Remote-friendly</span></div>
@@ -304,6 +303,31 @@
           </div>
         </div>
 
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon project-icon-sm"><i class="fas fa-shield-halved"></i></div>
+            <a href="https://github.com/sopitacasera/mcp-guardian" target="_blank" rel="noopener" class="project-link" aria-label="Ver en GitHub"><i class="fab fa-github"></i></a>
+          </div>
+          <h3>mcp-guardian</h3>
+          <p>Framework-agnostic security scanner for MCP (Model Context Protocol) servers. Detects prompt injection, tool poisoning and return-channel vulnerabilities — the attack vector competitors miss. CVSS scoring, HTML/JSON reports, GitHub Actions integration. Open source, Apache 2.0.</p>
+          <div class="project-stack">
+            <span>Python</span><span>AI Security</span><span>MCP</span><span>DevSecOps</span><span>CLI</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-top">
+            <div class="project-icon project-icon-sm"><i class="fas fa-microphone-lines"></i></div>
+            <a href="https://bibdigital.epn.edu.ec/handle/15000/27468" target="_blank" rel="noopener" class="project-link" aria-label="Ver tesis en repositorio EPN"><i class="fas fa-external-link-alt"></i></a>
+          </div>
+          <span class="cert-tag cert-tag-blue" style="margin-bottom:0.5rem;display:inline-block;">Investigación — EPN</span>
+          <h3>Detección de Vishing con IA</h3>
+          <p>Trabajo de Integración Curricular — EPN, 2026. Diseñé el <em>Detector Zenodo Ultra V3</em>: modelo de ML con RandomForest + extracción de MFCC, Chroma y features espectrales para distinguir voces sintéticas (deepfake audio) de voces reales con acentos latinoamericanos.</p>
+          <div class="project-stack">
+            <span>Python</span><span>Machine Learning</span><span>RandomForest</span><span>MFCC</span><span>Ciberseguridad</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -454,103 +478,39 @@
     </div>
   </section>
 
-  <!-- ===================== GITHUB STATS ===================== -->
-  <section id="github-stats" class="section section-alt">
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="section section-alt">
     <div class="container">
       <h2 class="section-title reveal">
         <span class="title-number">06.</span>
-        <span data-i18n="section.github">GitHub &amp; Actividad</span>
-        <span class="section-line"></span>
-      </h2>
-
-      <!-- Trophies -->
-      <div class="gh-block reveal">
-        <h3 class="gh-sub" data-i18n="github.trophies">Trofeos</h3>
-        <div class="gh-trophies-wrap">
-          <img
-            src="https://github-profile-trophy.vercel.app/?username=sopitacasera&theme=tokyonight&no-frame=true&row=1&column=7&margin-w=8&margin-h=8"
-            alt="GitHub Trophies"
-            class="gh-trophy-img"
-            loading="lazy">
-        </div>
-      </div>
-
-      <!-- Stats row -->
-      <div class="gh-stats-row reveal">
-        <div class="gh-stat-card">
-          <h3 class="gh-sub" data-i18n="github.stats">Estadísticas</h3>
-          <img
-            src="https://github-readme-stats.vercel.app/api?username=sopitacasera&theme=tokyonight&hide_border=true&show_icons=true&count_private=true&bg_color=0d1117"
-            alt="GitHub Stats"
-            class="gh-stats-img"
-            loading="lazy">
-        </div>
-        <div class="gh-stat-card">
-          <h3 class="gh-sub" data-i18n="github.langs">Lenguajes</h3>
-          <img
-            src="https://github-readme-stats.vercel.app/api/top-langs/?username=sopitacasera&theme=tokyonight&hide_border=true&layout=compact&bg_color=0d1117&langs_count=8"
-            alt="Top Languages"
-            class="gh-stats-img"
-            loading="lazy">
-        </div>
-      </div>
-
-      <!-- Streak -->
-      <div class="gh-block reveal">
-        <h3 class="gh-sub" data-i18n="github.streak">Racha de contribuciones</h3>
-        <div class="gh-center">
-          <img
-            src="https://streak-stats.demolab.com/?user=sopitacasera&theme=tokyonight&hide_border=true&background=0d1117"
-            alt="GitHub Streak"
-            class="gh-streak-img"
-            loading="lazy">
-        </div>
-      </div>
-
-      <!-- Activity graph -->
-      <div class="gh-block reveal">
-        <h3 class="gh-sub" data-i18n="github.activity">Actividad reciente</h3>
-        <img
-          src="https://github-readme-activity-graph.vercel.app/graph?username=sopitacasera&theme=tokyo-night&hide_border=true&area=true&bg_color=0d1117"
-          alt="Contribution Activity Graph"
-          class="gh-graph-img"
-          loading="lazy">
-      </div>
-
-      <!-- GitHub profile link -->
-      <div class="gh-cta reveal">
-        <a href="https://github.com/sopitacasera" target="_blank" rel="noopener" class="btn btn-ghost">
-          <i class="fab fa-github"></i>
-          <span data-i18n="github.profile">Ver perfil completo en GitHub</span>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===================== CONTACT ===================== -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section-title reveal">
-        <span class="title-number">07.</span>
         <span data-i18n="section.contact">Hablemos</span>
         <span class="section-line"></span>
       </h2>
       <div class="contact-wrapper reveal">
-        <p class="contact-intro" data-i18n-html="contact.intro">¿Tienes un proyecto, una posición abierta o una idea que requiere <strong>Full-Stack, Cloud o Automatización con IA</strong>? Escríbeme &mdash; respondo rápido.</p>
 
-        <a href="mailto:johanna28h2@gmail.com?subject=Oportunidad%20laboral%20-%20Portfolio&body=Hola%20Johanna%2C%20vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20conversar%20contigo." class="btn btn-primary contact-cta-btn">
-          <i class="fas fa-paper-plane"></i>
-          <span data-i18n="contact.cta">Envíame un email</span>
-        </a>
+        <div class="contact-open-to">
+          <p class="contact-open-label">Abierta a:</p>
+          <div class="contact-open-tags">
+            <span class="tag tag-blue"><i class="fas fa-briefcase"></i> Posiciones Full-Stack / Backend</span>
+            <span class="tag tag-purple"><i class="fas fa-robot"></i> Proyectos de Automatización con IA</span>
+            <span class="tag tag-green"><i class="fas fa-shield-halved"></i> Consultoría DevSecOps</span>
+            <span class="tag tag-orange"><i class="fas fa-cloud"></i> Roles Cloud / Azure</span>
+          </div>
+        </div>
 
-        <div class="contact-divider"><span data-i18n="contact.or">o también por</span></div>
+        <p class="contact-intro" data-i18n-html="contact.intro">¿Tienes un proyecto, una posición abierta o una idea que requiere <strong>Full-Stack, Cloud o Automatización con IA</strong>? Escríbeme &mdash; respondo en menos de 24 h.</p>
+
+        <div class="contact-cta-row">
+          <a href="mailto:johanna28h2@gmail.com?subject=Oportunidad%20laboral%20-%20Portfolio&body=Hola%20Johanna%2C%20vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20conversar%20contigo." class="btn btn-primary contact-cta-btn">
+            <i class="fas fa-paper-plane"></i>
+            <span data-i18n="contact.cta">Envíame un email</span>
+          </a>
+          <a href="https://wa.me/593963241909?text=Hola%20Johanna%2C%20vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20contactarte%20para%20una%20oportunidad%20laboral." target="_blank" rel="noopener" class="btn btn-outline">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+        </div>
 
         <div class="contact-cards">
-          <a href="https://wa.me/593963241909?text=Hola%20Johanna%2C%20vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20contactarte%20para%20una%20oportunidad%20laboral." target="_blank" rel="noopener" class="contact-card contact-card-wa">
-            <i class="fab fa-whatsapp"></i>
-            <div><strong>WhatsApp</strong><span>+593 96 324 1909</span></div>
-          </a>
           <a href="https://www.linkedin.com/in/johanna-huaraca-71b114276/" target="_blank" rel="noopener" class="contact-card contact-card-li">
             <i class="fab fa-linkedin"></i>
             <div><strong>LinkedIn</strong><span>johanna-huaraca-71b114276</span></div>
@@ -558,6 +518,10 @@
           <a href="mailto:johanna28h2@gmail.com" class="contact-card">
             <i class="fas fa-envelope"></i>
             <div><strong>Email</strong><span>johanna28h2@gmail.com</span></div>
+          </a>
+          <a href="https://wa.me/593963241909" target="_blank" rel="noopener" class="contact-card contact-card-wa">
+            <i class="fab fa-whatsapp"></i>
+            <div><strong>WhatsApp</strong><span>+593 96 324 1909</span></div>
           </a>
           <a href="https://github.com/sopitacasera" target="_blank" rel="noopener" class="contact-card">
             <i class="fab fa-github"></i>
